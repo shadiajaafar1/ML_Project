@@ -1,0 +1,3006 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Proyecto Viz &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'EDA_Preliminar_2';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Modelos Eficaces:" href="modelosindependientes.html" />
+    <link rel="prev" title="Proyecto final de Machine Learning" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Proyecto final de Machine Learning
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Proyecto Viz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modelosindependientes.html">Modelos Eficaces:</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="stacking_model.html">Modelo Propuesto</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FEDA_Preliminar_2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/EDA_Preliminar_2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Proyecto Viz</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#librerias-utilizadas">Librerías utilizadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-exploratorio-de-datos-eda-fraud-detection">Análisis Exploratorio de Datos (EDA) - Fraud Detection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datos">Datos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#junte-de-columnas">Junte de columnas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transactiondt-a-fecha">TransactionDT a fecha</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exploracion-de-la-serie-de-tiempo">Exploracion de la serie de tiempo</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datos-faltantes">Datos faltantes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eda-variables-numericas-y-categoricas">Eda Variables numericas y categoricas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numericas">Numericas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#columnas-categoricas">Columnas Categoricas</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="proyecto-viz">
+<h1>Proyecto Viz<a class="headerlink" href="#proyecto-viz" title="Link to this heading">#</a></h1>
+<section id="librerias-utilizadas">
+<h2>Librerías utilizadas<a class="headerlink" href="#librerias-utilizadas" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">cross_val_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">roc_curve</span><span class="p">,</span><span class="n">auc</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span>  <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">KNNImputer</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="analisis-exploratorio-de-datos-eda-fraud-detection">
+<h2>Análisis Exploratorio de Datos (EDA) - Fraud Detection<a class="headerlink" href="#analisis-exploratorio-de-datos-eda-fraud-detection" title="Link to this heading">#</a></h2>
+<section id="datos">
+<h3>Datos<a class="headerlink" href="#datos" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dataF.csv&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\g_a09\AppData\Local\Temp\ipykernel_6340\1382054988.py:1: DtypeWarning: Columns (5) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(&#39;dataF.csv&#39;)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   TransactionID  TransactionDT  TransactionAmt   C3   C5  card6  isFraud  \
+0        2987000          86400            68.5  0.0  0.0   True    False   
+1        2987001          86401            29.0  0.0  0.0   True    False   
+2        2987002          86469            59.0  0.0  0.0  False    False   
+3        2987003          86499            50.0  0.0  0.0  False    False   
+4        2987004          86506            50.0  0.0  0.0   True    False   
+
+   card3  card2  card4_american express  card4_discover  card4_mastercard  \
+0  150.0    NaN                   False            True             False   
+1  150.0  404.0                   False           False              True   
+2  150.0  490.0                   False           False             False   
+3  150.0  567.0                   False           False              True   
+4  150.0  514.0                   False           False              True   
+
+   card4_visa  
+0       False  
+1       False  
+2        True  
+3       False  
+4       False  
+</pre></div>
+</div>
+</div>
+</div>
+<p>Preliminarmente se observa que hay columnas tanto categoricas como numericas, donde las ultimas 4 categorias se pueden resumir en 1 sola variable que sea el tipo de compañia procesadora de pagos (AmericanExp, Discover, Mastercard, Visa).
+Por otro lado la columna “TransactionDT” parece ser un registro de tiempo para cada transaccion en segundos, por conveniencia se cambiara a 1 de enero 2024 la hora mas baja, debido a que no se tiene mas informacion al respecto.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_card</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">9</span><span class="p">:]</span>
+<span class="n">df_card</span><span class="p">[</span><span class="s2">&quot;sum&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">df_card</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="n">df_card</span><span class="p">[</span><span class="s2">&quot;sum&quot;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se puede confirmar que para cada fila solo existe un unico valor entre las 4 columnas, por ende esa columna puede ser agrupada en 1 sola, resultando en una variable categorica con 4 argumentos.</p>
+</section>
+<section id="junte-de-columnas">
+<h3>Junte de columnas<a class="headerlink" href="#junte-de-columnas" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">column_dict</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;card4_american express&quot;</span><span class="p">:</span><span class="s2">&quot;AmExp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;card4_discover&quot;</span><span class="p">:</span><span class="s2">&quot;Disc&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;card4_mastercard&quot;</span><span class="p">:</span><span class="s2">&quot;MastC&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;card4_visa&quot;</span><span class="p">:</span><span class="s2">&quot;Visa&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">column_dict</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Entity&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">9</span><span class="p">:]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">9</span><span class="p">:</span><span class="mi">13</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>TransactionID</th>
+      <th>TransactionDT</th>
+      <th>TransactionAmt</th>
+      <th>C3</th>
+      <th>C5</th>
+      <th>card6</th>
+      <th>isFraud</th>
+      <th>card3</th>
+      <th>card2</th>
+      <th>Entity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2987000</td>
+      <td>86400</td>
+      <td>68.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>NaN</td>
+      <td>Disc</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2987001</td>
+      <td>86401</td>
+      <td>29.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>404.0</td>
+      <td>MastC</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Se confirma que se hizo correctamente la creacion de una nueva variable que contiene la informacion de las 4 originales.</p>
+</section>
+<section id="transactiondt-a-fecha">
+<h3>TransactionDT a fecha<a class="headerlink" href="#transactiondt-a-fecha" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">TransactionDT</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se confirma primero que no existan faltantes para proceder a convertir el la columna TransactionDT a fecha</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fecha_inicio</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">pasar_fechas</span><span class="p">(</span><span class="n">segs</span><span class="p">):</span> <span class="k">return</span> <span class="n">fecha_inicio</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">segs</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;TransactionDT&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;TransactionDT&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pasar_fechas</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">TransactionDT</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Timestamp(&#39;2024-01-02 00:00:00&#39;), Timestamp(&#39;2024-01-02 00:00:01&#39;), Timestamp(&#39;2024-01-02 00:01:09&#39;), Timestamp(&#39;2024-01-02 00:01:39&#39;), Timestamp(&#39;2024-01-02 00:01:46&#39;), Timestamp(&#39;2024-01-02 00:01:50&#39;), Timestamp(&#39;2024-01-02 00:02:02&#39;), Timestamp(&#39;2024-01-02 00:02:09&#39;), Timestamp(&#39;2024-01-02 00:02:15&#39;), Timestamp(&#39;2024-01-02 00:02:16&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">TransactionDT</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0   2024-01-02 00:00:00
+1   2024-01-02 00:00:01
+2   2024-01-02 00:01:09
+3   2024-01-02 00:01:39
+4   2024-01-02 00:01:46
+5   2024-01-02 00:01:50
+6   2024-01-02 00:02:02
+7   2024-01-02 00:02:09
+8   2024-01-02 00:02:15
+9   2024-01-02 00:02:16
+Name: TransactionDT, dtype: datetime64[ns]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exploracion-de-la-serie-de-tiempo">
+<h3>Exploracion de la serie de tiempo<a class="headerlink" href="#exploracion-de-la-serie-de-tiempo" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;hora_dia&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;TransactionDT&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">hour</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se procede a crear una variable que contenga la informacion de que “hora del dia” se esta registrando la transaccion.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;hora_dia&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="n">total_transactions</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">NamedAgg</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;isFraud&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">),</span>
+    <span class="n">fraudulent_transactions</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">NamedAgg</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;isFraud&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;proportion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;fraudulent_transactions&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;total_transactions&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;proportion&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Proporción de Transacciones Fraudulentas por Hora del Día&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Hora del Día&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Proporción de Transacciones Fraudulentas&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/cb18cedaaac017e26adae2c4d6a593f984a8c01644d7213c15fe86a166bea2a9.png" src="_images/cb18cedaaac017e26adae2c4d6a593f984a8c01644d7213c15fe86a166bea2a9.png" />
+</div>
+</div>
+<p>Se puede apreciar que hay un pico alrededor de “la hora 7” de proporcion de transacciones fraudulentas, lo que indicaria una importancia significa en la hora de la transaccion.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;TransactionDT&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span>
+
+<span class="n">grouped</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="n">total_transactions</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">NamedAgg</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;isFraud&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">),</span>
+    <span class="n">fraudulent_transactions</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">NamedAgg</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;isFraud&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;fraudulent_proportion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;fraudulent_transactions&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;total_transactions&#39;</span><span class="p">]</span>
+
+<span class="c1"># Graficar la evolución de la proporción de fraudes a lo largo del tiempo</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">grouped</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;fraudulent_proportion&#39;</span><span class="p">,</span> 
+              <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Evolución de la Proporción de Fraudes a lo Largo del Tiempo&#39;</span><span class="p">,</span>
+              <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;Fecha&#39;</span><span class="p">,</span> <span class="s1">&#39;fraudulent_proportion&#39;</span><span class="p">:</span> <span class="s1">&#39;Proporción de Fraudes&#39;</span><span class="p">},</span>
+              <span class="n">markers</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+<p>Aparentemente no se aprecia una tendencia entre dias ni una estacionalidad marcada, se observa ciertos picos de transacciones fraudulentas, sin embargo no parece haber un cambio de media y de varianza a lo largo de el dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">181</span><span class="p">,:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total_transactions         2754.00000
+fraudulent_transactions     119.00000
+fraudulent_proportion         0.04321
+Name: 2024-07-01, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">seasonal_decompose</span><span class="p">(</span><span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;fraudulent_proportion&#39;</span><span class="p">],</span> <span class="n">period</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;additive&quot;</span><span class="p">)</span>
+
+<span class="c1"># Graficar los componentes de la descomposición</span>
+<span class="n">res</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/c2699373eacd23caf01ad7f01497419d928f2610e8759baaabbf79a3803527db.png" src="_images/c2699373eacd23caf01ad7f01497419d928f2610e8759baaabbf79a3803527db.png" />
+</div>
+</div>
+<p>hay una clara estacionalidad con respecto a que dia de la semana se realiza la transaccion, adicionalmente se cuenta con un crecimiento al principio de los datos que despues se mantiene un poco constante a lo largo del resto de dias del dataset.
+Por otro lado podemos observar que se logra capturar un buen patron debido a que los residuos se comportan aleatoriamente al rededor de una media y varianza.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sm</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">plot_acf</span><span class="p">(</span><span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;fraudulent_proportion&#39;</span><span class="p">],</span> <span class="n">lags</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/719a41390f535f979be4c5ca49d00f66a634885f3a6991c0c87082d2ae67e686.png" src="_images/719a41390f535f979be4c5ca49d00f66a634885f3a6991c0c87082d2ae67e686.png" />
+</div>
+</div>
+<p>Al realizar la prueba de autocorrelacion podemos notar que hay un indicio de autocorrelacion cada 8 dias, lo que corresponderia al mismo dia de la semana anterior.</p>
+<p>Como conslusion del analisis de los datos como serie de tiempo se puede confirmar que la hora del dia en el que se realiza la transaccion y el dia de la semana de dicha transaccion son datos relevantes para la prediccion de si una transaccion es fraudulenta o no.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;dia_semana&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;TransactionDT&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">weekday</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;dia_semana&#39;</span><span class="p">,</span><span class="s2">&quot;date&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="n">total_transactions</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">NamedAgg</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;isFraud&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">),</span>
+    <span class="n">fraudulent_transactions</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">NamedAgg</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;isFraud&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;fraudulent_proportion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;fraudulent_transactions&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;total_transactions&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">box</span><span class="p">(</span><span class="n">grouped</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;dia_semana&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;fraudulent_proportion&#39;</span><span class="p">,</span>
+             <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Proporción de Fraudes por Día de la Semana&#39;</span><span class="p">,</span>
+             <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;dia_de_la_semana&#39;</span><span class="p">:</span> <span class="s1">&#39;Día de la Semana&#39;</span><span class="p">,</span> <span class="s1">&#39;fraudulent_proportion&#39;</span><span class="p">:</span> <span class="s1">&#39;Proporción de Fraudes&#39;</span><span class="p">})</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+<p>Se encuentra que existe patrones de comportamiento de proporcion de fraudes distintos para cada dia.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>590540
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="datos-faltantes">
+<h2>Datos faltantes<a class="headerlink" href="#datos-faltantes" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>TransactionID</th>
+      <th>TransactionDT</th>
+      <th>TransactionAmt</th>
+      <th>C3</th>
+      <th>C5</th>
+      <th>card6</th>
+      <th>isFraud</th>
+      <th>card3</th>
+      <th>card2</th>
+      <th>Entity</th>
+      <th>hora_dia</th>
+      <th>date</th>
+      <th>dia_semana</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2987000</td>
+      <td>2024-01-02 00:00:00</td>
+      <td>68.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>NaN</td>
+      <td>Disc</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2987001</td>
+      <td>2024-01-02 00:00:01</td>
+      <td>29.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>404.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2987002</td>
+      <td>2024-01-02 00:01:09</td>
+      <td>59.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>490.0</td>
+      <td>Visa</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2987003</td>
+      <td>2024-01-02 00:01:39</td>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>567.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2987004</td>
+      <td>2024-01-02 00:01:46</td>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>514.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Dado que ya se extrajo la mayor cantidad de informacion util de la columna “TransactionDT”, se eliminara. Por otro lado el Id de la transaccion tambien sera removida debido a que no aporta nada para predecir.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;TransactionID&quot;</span><span class="p">,</span><span class="s2">&quot;TransactionDT&quot;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_new</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>TransactionAmt</th>
+      <th>C3</th>
+      <th>C5</th>
+      <th>card6</th>
+      <th>isFraud</th>
+      <th>card3</th>
+      <th>card2</th>
+      <th>Entity</th>
+      <th>hora_dia</th>
+      <th>date</th>
+      <th>dia_semana</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>68.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>NaN</td>
+      <td>Disc</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>29.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>404.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>59.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>490.0</td>
+      <td>Visa</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>567.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>514.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 590540 entries, 0 to 590539
+Data columns (total 11 columns):
+ #   Column          Non-Null Count   Dtype  
+---  ------          --------------   -----  
+ 0   TransactionAmt  590540 non-null  float64
+ 1   C3              590540 non-null  float64
+ 2   C5              590540 non-null  float64
+ 3   card6           588924 non-null  object 
+ 4   isFraud         590540 non-null  bool   
+ 5   card3           588975 non-null  float64
+ 6   card2           581607 non-null  float64
+ 7   Entity          590540 non-null  object 
+ 8   hora_dia        590540 non-null  int64  
+ 9   date            590540 non-null  object 
+ 10  dia_semana      590540 non-null  int64  
+dtypes: bool(1), float64(5), int64(2), object(3)
+memory usage: 45.6+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se puede apreciar algunas columnas con faltantes, la columna “card6” que es una columna boleana esta como objeto, se procedera a hacer la transformacion.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">])</span>
+<span class="n">df_new</span><span class="p">[</span><span class="s2">&quot;card6&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">df_new</span><span class="p">[</span><span class="s2">&quot;card6&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 590540 entries, 0 to 590539
+Data columns (total 11 columns):
+ #   Column          Non-Null Count   Dtype         
+---  ------          --------------   -----         
+ 0   TransactionAmt  590540 non-null  float64       
+ 1   C3              590540 non-null  float64       
+ 2   C5              590540 non-null  float64       
+ 3   card6           590540 non-null  bool          
+ 4   isFraud         590540 non-null  bool          
+ 5   card3           588975 non-null  float64       
+ 6   card2           581607 non-null  float64       
+ 7   Entity          590540 non-null  object        
+ 8   hora_dia        590540 non-null  int64         
+ 9   date            590540 non-null  datetime64[ns]
+ 10  dia_semana      590540 non-null  int64         
+dtypes: bool(2), datetime64[ns](1), float64(5), int64(2), object(1)
+memory usage: 41.7+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ahora las columnas son reconocidad correctamente por el tipo de dato que tienen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cols_w_nan</span><span class="o">=</span><span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">()]</span>
+<span class="n">cols_w_nan</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;card6&#39;, &#39;card3&#39;, &#39;card2&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Solo las columnas card3 y card2 presentan datos faltantes, se procede a revisar si representan un % alto de los registros.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8933
+</pre></div>
+</div>
+</div>
+</div>
+<p>Existen 8933 filas con almenos 1 valor en NAN.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prop_nan</span><span class="o">=</span><span class="p">(</span><span class="n">df_new</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df_new</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">prop_nan</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5126833068039423
+</pre></div>
+</div>
+</div>
+</div>
+<p>los valores faltantes representan aproximadamete el 1.5% de los registros.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">df_new</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b</span><span class="o">=</span><span class="n">a</span><span class="p">[</span><span class="n">a</span><span class="o">==</span><span class="kc">True</span><span class="p">]</span>
+<span class="n">c</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="n">d</span><span class="o">=</span><span class="n">df_new</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">c</span><span class="p">,:]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;card2&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8933
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nfraud</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">True</span><span class="p">])</span>
+<span class="n">nnotfraud</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">False</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;porcentaje de valores faltantes que son fraudes&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">nfraud</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">nfraud</span><span class="o">+</span><span class="n">nnotfraud</span><span class="p">)</span> <span class="p">,</span><span class="s2">&quot;que no lo son&quot;</span><span class="p">,(</span><span class="n">nnotfraud</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">nfraud</span><span class="o">+</span><span class="n">nnotfraud</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>porcentaje de valores faltantes que son fraudes 4.735251315347588 que no lo son 95.26474868465242
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nfraud</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="n">df_new</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">True</span><span class="p">])</span>
+<span class="n">nnotfraud</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="n">df_new</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">False</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span> <span class="p">(</span><span class="n">nfraud</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">nfraud</span><span class="o">+</span><span class="n">nnotfraud</span><span class="p">)</span> <span class="p">,</span><span class="s2">&quot;que no lo son&quot;</span><span class="p">,(</span><span class="n">nnotfraud</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">nfraud</span><span class="o">+</span><span class="n">nnotfraud</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.499000914417313 que no lo son 96.50099908558269
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se puede ver que mas o menos se conserva la proporcion de faltantes de valores de fraud y no fraud entre los que tienen datos faltante y lo que no tienen datos faltantes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">df_new</span><span class="p">[</span><span class="n">df_new</span><span class="p">[</span><span class="s2">&quot;card2&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+
+<span class="n">nfraud</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">True</span><span class="p">])</span>
+<span class="n">nnotfraud</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">False</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span> <span class="p">(</span><span class="n">nfraud</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">nfraud</span><span class="o">+</span><span class="n">nnotfraud</span><span class="p">)</span> <span class="p">,</span><span class="s2">&quot;que no lo son&quot;</span><span class="p">,(</span><span class="n">nnotfraud</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">nfraud</span><span class="o">+</span><span class="n">nnotfraud</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.735251315347588 que no lo son 95.26474868465242
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se mantiene la relacion inicial.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">df_new</span><span class="p">[</span><span class="n">df_new</span><span class="p">[</span><span class="s2">&quot;card3&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+
+<span class="n">nfraud</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">True</span><span class="p">])</span>
+<span class="n">nnotfraud</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">False</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span> <span class="p">(</span><span class="n">nfraud</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">nfraud</span><span class="o">+</span><span class="n">nnotfraud</span><span class="p">)</span> <span class="p">,</span><span class="s2">&quot;que no lo son&quot;</span><span class="p">,(</span><span class="n">nnotfraud</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">nfraud</span><span class="o">+</span><span class="n">nnotfraud</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.4920127795527156 que no lo son 97.50798722044729
+</pre></div>
+</div>
+</div>
+</div>
+<p>se puede observar que hay un poco mas de presencia de valores faltantantes para transacciones no fraudulentas que para las fraudulentas en la columna card3.</p>
+<p>Se procede a realizar una tecnica de KNN-Imputation para los datos faltantes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span>
+    
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>TransactionID</th>
+      <th>TransactionDT</th>
+      <th>TransactionAmt</th>
+      <th>C3</th>
+      <th>C5</th>
+      <th>card6</th>
+      <th>isFraud</th>
+      <th>card3</th>
+      <th>card2</th>
+      <th>Entity</th>
+      <th>hora_dia</th>
+      <th>date</th>
+      <th>dia_semana</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2987000</td>
+      <td>2024-01-02 00:00:00</td>
+      <td>68.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>NaN</td>
+      <td>Disc</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2987001</td>
+      <td>2024-01-02 00:00:01</td>
+      <td>29.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>404.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2987002</td>
+      <td>2024-01-02 00:01:09</td>
+      <td>59.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>490.0</td>
+      <td>Visa</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2987003</td>
+      <td>2024-01-02 00:01:39</td>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>567.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2987004</td>
+      <td>2024-01-02 00:01:46</td>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>514.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imputer</span><span class="o">=</span><span class="n">KNNImputer</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">numeric_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;number&#39;</span><span class="p">])</span>
+<span class="n">categorical_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;number&#39;</span><span class="p">])</span>
+
+<span class="n">numeric_df_imputed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">imputer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">numeric_df</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="n">numeric_df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">numeric_df_imputed</span><span class="p">,</span> <span class="n">categorical_df</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>TransactionID</th>
+      <th>TransactionAmt</th>
+      <th>C3</th>
+      <th>C5</th>
+      <th>card3</th>
+      <th>card2</th>
+      <th>hora_dia</th>
+      <th>dia_semana</th>
+      <th>TransactionDT</th>
+      <th>card6</th>
+      <th>isFraud</th>
+      <th>Entity</th>
+      <th>date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2987000.0</td>
+      <td>68.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>150.0</td>
+      <td>522.5</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>2024-01-02 00:00:00</td>
+      <td>True</td>
+      <td>False</td>
+      <td>Disc</td>
+      <td>2024-01-02</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2987001.0</td>
+      <td>29.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>150.0</td>
+      <td>404.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>2024-01-02 00:00:01</td>
+      <td>True</td>
+      <td>False</td>
+      <td>MastC</td>
+      <td>2024-01-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2987002.0</td>
+      <td>59.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>150.0</td>
+      <td>490.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>2024-01-02 00:01:09</td>
+      <td>False</td>
+      <td>False</td>
+      <td>Visa</td>
+      <td>2024-01-02</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2987003.0</td>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>150.0</td>
+      <td>567.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>2024-01-02 00:01:39</td>
+      <td>False</td>
+      <td>False</td>
+      <td>MastC</td>
+      <td>2024-01-02</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2987004.0</td>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>150.0</td>
+      <td>514.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>2024-01-02 00:01:46</td>
+      <td>True</td>
+      <td>False</td>
+      <td>MastC</td>
+      <td>2024-01-02</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;DataF_2.csv&quot;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="eda-variables-numericas-y-categoricas">
+<h2>Eda Variables numericas y categoricas<a class="headerlink" href="#eda-variables-numericas-y-categoricas" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;DataF_2.csv&quot;</span><span class="p">)</span>
+<span class="n">df_new</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\g_a09\AppData\Local\Temp\ipykernel_9948\1234892607.py:1: DtypeWarning: Columns (5) have mixed types. Specify dtype option on import or set low_memory=False.
+  df_new=pd.read_csv(&quot;DataF_2.csv&quot;)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>TransactionID</th>
+      <th>TransactionDT</th>
+      <th>TransactionAmt</th>
+      <th>C3</th>
+      <th>C5</th>
+      <th>card6</th>
+      <th>isFraud</th>
+      <th>card3</th>
+      <th>card2</th>
+      <th>Entity</th>
+      <th>hora_dia</th>
+      <th>date</th>
+      <th>dia_semana</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2987000</td>
+      <td>2024-01-02 00:00:00</td>
+      <td>68.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>NaN</td>
+      <td>Disc</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2987001</td>
+      <td>2024-01-02 00:00:01</td>
+      <td>29.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>404.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2987002</td>
+      <td>2024-01-02 00:01:09</td>
+      <td>59.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>490.0</td>
+      <td>Visa</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2987003</td>
+      <td>2024-01-02 00:01:39</td>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>567.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2987004</td>
+      <td>2024-01-02 00:01:46</td>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>514.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fraude</span> <span class="o">=</span> <span class="p">{</span><span class="kc">False</span><span class="p">:</span> <span class="s1">&#39;No es fraude&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">:</span> <span class="s1">&#39;Es fraude&#39;</span><span class="p">}</span>
+
+<span class="n">df_b</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;isFraud&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">fraude</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_b</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Fraude&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Número de transacciones&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribución de la variable isFraud&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/1af11f68a76116e318c1bc5f860fcc80c6d1378e2e4caae2bf7cfc4a48ae2fec.png" src="_images/1af11f68a76116e318c1bc5f860fcc80c6d1378e2e4caae2bf7cfc4a48ae2fec.png" />
+</div>
+</div>
+<p>Se observa que la mayoría de datos en el datset corresponde a la categoría ‘No es fraude’, mientras que hay muchos menos datos de la categoría ‘Es fraude’. Esto significa que tenemos un conjunto de datos desbalanceados.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>TransactionAmt</th>
+      <th>C3</th>
+      <th>C5</th>
+      <th>card6</th>
+      <th>isFraud</th>
+      <th>card3</th>
+      <th>card2</th>
+      <th>Entity</th>
+      <th>hora_dia</th>
+      <th>date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>68.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>NaN</td>
+      <td>Disc</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>29.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>404.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>59.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>490.0</td>
+      <td>Visa</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>567.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>514.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">=</span><span class="n">df_new</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_new</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>TransactionAmt</th>
+      <th>C3</th>
+      <th>C5</th>
+      <th>card6</th>
+      <th>isFraud</th>
+      <th>card3</th>
+      <th>card2</th>
+      <th>Entity</th>
+      <th>hora_dia</th>
+      <th>date</th>
+      <th>dia_semana</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>29.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>404.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>59.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>490.0</td>
+      <td>Visa</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>567.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>514.0</td>
+      <td>MastC</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>49.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>150.0</td>
+      <td>555.0</td>
+      <td>Visa</td>
+      <td>0</td>
+      <td>2024-01-02</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_num</span><span class="o">=</span><span class="n">df_new</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;float&quot;</span><span class="p">)</span>
+<span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">df_new</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span>
+
+<span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Entity&quot;</span><span class="p">,</span><span class="s2">&quot;card6&quot;</span><span class="p">,</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span>
+<span class="n">df_n_cat</span><span class="o">=</span><span class="n">df_new</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">cols</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_num</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>TransactionAmt</th>
+      <th>C3</th>
+      <th>C5</th>
+      <th>card3</th>
+      <th>card2</th>
+      <th>isFraud</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>29.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>150.0</td>
+      <td>404.0</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>59.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>150.0</td>
+      <td>490.0</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>150.0</td>
+      <td>567.0</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>150.0</td>
+      <td>514.0</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>49.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>150.0</td>
+      <td>555.0</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_cat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Entity</th>
+      <th>card6</th>
+      <th>isFraud</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>MastC</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Visa</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>MastC</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>MastC</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Visa</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="numericas">
+<h3>Numericas<a class="headerlink" href="#numericas" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Histograma con todos los datos</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;TransactionAmt&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Todos los datos&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+
+<span class="c1"># Histograma donde la columna isFraud = 0</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">][</span><span class="s2">&quot;TransactionAmt&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;isFraud = 0&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+
+<span class="c1"># Histograma donde la columna isFraud = 1</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="p">[</span><span class="s1">&#39;isFraud&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">][</span><span class="s2">&quot;TransactionAmt&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;isFraud = 1&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/f2ab596e494f41ef09c4f50c95bcf5ee7cb5eced7a452d7b20e8d6655d9b3bd8.png" src="_images/f2ab596e494f41ef09c4f50c95bcf5ee7cb5eced7a452d7b20e8d6655d9b3bd8.png" />
+</div>
+</div>
+<p>poco valores muy altos, se analiza si los muy alto tienen alguna incidencia en el fraude.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;TransactionAmt&quot;</span><span class="p">]</span>
+<span class="n">b</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.025</span><span class="p">,</span><span class="mf">0.975</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">=</span><span class="n">df_n_num</span><span class="p">[(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;TransactionAmt&quot;</span><span class="p">]</span><span class="o">&lt;</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;TransactionAmt&quot;</span><span class="p">]</span><span class="o">&gt;</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">])][[</span><span class="s2">&quot;TransactionAmt&quot;</span><span class="p">,</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]]</span>
+<span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>TransactionAmt</th>
+      <th>isFraud</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>68.50</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>29.00</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>59.00</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>50.00</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>50.00</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>590535</th>
+      <td>49.00</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>590536</th>
+      <td>39.50</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>590537</th>
+      <td>30.95</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>590538</th>
+      <td>117.00</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>590539</th>
+      <td>279.95</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+<p>560975 rows × 2 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Histograma con todos los datos</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;TransactionAmt&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Todos los datos&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+
+<span class="c1"># Histograma donde la columna isFraud = 0</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">][</span><span class="s2">&quot;TransactionAmt&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;isFraud = 0&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+
+<span class="c1"># Histograma donde la columna isFraud = 1</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;isFraud&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">][</span><span class="s2">&quot;TransactionAmt&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;isFraud = 1&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/1aa093d18d0197a97cd61b56334179202a859a2ee277a347fae0314cbdb3161e.png" src="_images/1aa093d18d0197a97cd61b56334179202a859a2ee277a347fae0314cbdb3161e.png" />
+</div>
+</div>
+<p>Se puede observar que para las transacciones no fraudulentas hay bayes en datos al rededor de 80 y 130, por el contrario las transacciones fraudulentas si presentan una frecuencia proporcional de estos, indicando que podria haber relevancia en cuanto al valor de TransactionAmt.</p>
+<p>Se aprecia curvas semejantes a la distribucion exponencial.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Crear un boxplot para comparar &#39;TransactionAmt&#39; según &#39;isFraud&#39;</span>
+<span class="c1"># Dado que &#39;isFraud&#39; es una variable categórica, lo usamos como eje x</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;isFraud&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">])</span>
+
+<span class="c1"># Añadir títulos y etiquetas</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Comparación de TransactionAmt por isFraud&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;isFraud&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/eceeae9842d24c5708f6785057841a1414cc98e1d4a101424dbb42712df99da0.png" src="_images/eceeae9842d24c5708f6785057841a1414cc98e1d4a101424dbb42712df99da0.png" />
+</div>
+</div>
+<p>Se puede apreciar que para los casos de fraude, los valores de TransactionAmt tienden a ser mayores que cuando no hay fraude.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">=</span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;TransactionAmt&quot;</span><span class="p">]</span><span class="o">&gt;</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]][[</span><span class="s2">&quot;TransactionAmt&quot;</span><span class="p">,</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se crea otro Df con la informacion de TransactionAmt con valores mayores al percentil 2.5.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Crear un boxplot para comparar &#39;TransactionAmt&#39; según &#39;isFraud&#39;</span>
+<span class="c1"># Dado que &#39;isFraud&#39; es una variable categórica, lo usamos como eje x</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">d</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;isFraud&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">7000</span><span class="p">)</span>
+
+<span class="c1"># Añadir títulos y etiquetas</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Comparación de TransactionAmt por isFraud&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;isFraud&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/55c0c7da2d552b881242ab98e6d02e07e1b03490473a63d55f8fd023da0dd801.png" src="_images/55c0c7da2d552b881242ab98e6d02e07e1b03490473a63d55f8fd023da0dd801.png" />
+</div>
+</div>
+<p>Se puede observar que las transacciones que no son fraude presentan una distribucion mucho mas amplia que las transacciones que si, se  puede ver que la media se encuentra cerca del percentir 75 de Fraude y valores mas altos en general.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;C3&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Todos los datos&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+
+<span class="c1"># Histograma donde la columna isFraud = 0</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">][</span><span class="s2">&quot;C3&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;isFraud = 0&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+
+<span class="c1"># Histograma donde la columna isFraud = 1</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="p">[</span><span class="s1">&#39;isFraud&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">][</span><span class="s2">&quot;C3&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;isFraud = 1&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/aac1a2fcc1363ad99ef6f519abeeff318bd5ca6d49125db4bb99fcd06a96def3.png" src="_images/aac1a2fcc1363ad99ef6f519abeeff318bd5ca6d49125db4bb99fcd06a96def3.png" />
+</div>
+</div>
+<p>Se observa que la gran parte de los datos se concentran en 0, adicional se ve que las transacciones no fraudulentas tienen algunos datos que crecen hasta 25, en cambio los de fraude siempre se mantienen entre 0 y 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;C3&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.025</span><span class="p">,</span><span class="mf">0.975</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.025    0.0
+0.975    0.0
+Name: C3, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como descrito previamente, la mayoria de datos corresponden al valor de 0.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">True</span><span class="p">][</span><span class="s2">&quot;C3&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.025</span><span class="p">,</span><span class="mf">0.999</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.025    0.0
+0.999    0.0
+Name: C3, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">False</span><span class="p">][</span><span class="s2">&quot;C3&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.025</span><span class="p">,</span><span class="mf">0.999</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.025    0.0
+0.999    1.0
+Name: C3, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">False</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;C3&quot;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">)])</span>
+<span class="n">m</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">True</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;C3&quot;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9979330301777594
+</pre></div>
+</div>
+</div>
+</div>
+<p>teniendo en cuenta que los fraudes se mueven entre 0 y 1, si la transaccion presenta valores de 1 o mas, en el 99,8% de las veces no es fraudulenta.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">False</span><span class="p">)])</span>
+<span class="n">m</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">True</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9651998686398203
+</pre></div>
+</div>
+</div>
+</div>
+<p>La proporcion de no fraudes cambia al analizar todos los datos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span><span class="o">=</span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="o">.</span><span class="n">C3</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">][[</span><span class="s2">&quot;C3&quot;</span><span class="p">,</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]]</span>
+<span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;C3&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0     579188
+1.0       2127
+2.0        180
+3.0         58
+4.0          7
+16.0         6
+9.0          5
+11.0         5
+5.0          3
+13.0         3
+14.0         3
+7.0          2
+17.0         2
+15.0         2
+12.0         2
+10.0         2
+8.0          2
+18.0         1
+19.0         1
+20.0         1
+21.0         1
+22.0         1
+23.0         1
+24.0         1
+25.0         1
+6.0          1
+26.0         1
+Name: C3, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>De los 580.000 datos que se cuentan se tiene que casi todos tienen valores de 0 y con unos cuantos casos atipicos que cuentan con otro valor, los cuales son enteros.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Crear un boxplot para comparar &#39;TransactionAmt&#39; según &#39;isFraud&#39;</span>
+<span class="c1"># Dado que &#39;isFraud&#39; es una variable categórica, lo usamos como eje x</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;isFraud&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;C3&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Añadir títulos y etiquetas</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Comparación de TransactionAmt por isFraud&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;isFraud&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/9b41d3bbdbce039077224b7f103d15074dcfdec9bfb740bd121f67602f6707a7.png" src="_images/9b41d3bbdbce039077224b7f103d15074dcfdec9bfb740bd121f67602f6707a7.png" />
+</div>
+</div>
+<p>Omitiendo el valor de 0, se puede observar que los datos que son mayores a 1 son no fraudulentas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;C5&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.025</span><span class="p">,</span><span class="mf">0.975</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.025    150.0
+0.975    185.0
+Name: card3, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Crear un boxplot para comparar &#39;TransactionAmt&#39; según &#39;isFraud&#39;</span>
+<span class="c1"># Dado que &#39;isFraud&#39; es una variable categórica, lo usamos como eje x</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_n_num</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;isFraud&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;C5&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Añadir títulos y etiquetas</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Comparación de TransactionAmt por isFraud&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;isFraud&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/b1e9827dde6f69664cf1ea2af4e1a046ba14ccbc0105387921372d540765de80.png" src="_images/b1e9827dde6f69664cf1ea2af4e1a046ba14ccbc0105387921372d540765de80.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card3&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>150.0    514142
+185.0     56345
+106.0      1571
+144.0      1245
+146.0      1230
+          ...  
+125.0         1
+101.0         1
+199.0         1
+132.0         1
+173.0         1
+Name: card3, Length: 109, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>La gran mayoria de datos tienen valores de 150 y 185.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card3&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.025</span><span class="p">,</span><span class="mf">0.975</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.025    150.0
+0.975    185.0
+Name: card3, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">False</span><span class="p">][</span><span class="s2">&quot;card3&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.025</span><span class="p">,</span><span class="mf">0.975</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.025    150.0
+0.975    185.0
+Name: card3, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">True</span><span class="p">][</span><span class="s2">&quot;card3&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.025</span><span class="p">,</span><span class="mf">0.975</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.025    150.0
+0.975    185.0
+Name: card3, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>el 95% de los datos estan presentes en 150 y 185, tanto para transacciones no fraudulentas como las fraudulentas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card3&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Todos los datos&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="c1"># Histograma donde la columna isFraud = 0</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">][</span><span class="s2">&quot;card3&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;isFraud = 0&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="c1"># Histograma donde la columna isFraud = 1</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="p">[</span><span class="s1">&#39;isFraud&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">][</span><span class="s2">&quot;card3&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;isFraud = 1&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/55f2b859ea21035e188397133edc102064f19023def6f3c4bbd3161d8bee2c0e.png" src="_images/55f2b859ea21035e188397133edc102064f19023def6f3c4bbd3161d8bee2c0e.png" />
+</div>
+</div>
+<p>Las transacciones fraudulentas presentan una gran proporcion para el valor 185, con respecto a la proporcion de los que no son fraude.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">False</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card3&quot;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">180</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card3&quot;</span><span class="p">]</span><span class="o">&lt;=</span><span class="mi">190</span><span class="p">)])</span>
+<span class="n">m</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">True</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card3&quot;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">180</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card3&quot;</span><span class="p">]</span><span class="o">&lt;=</span><span class="mi">190</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9758138377205349
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">False</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card3&quot;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">180</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card3&quot;</span><span class="p">]</span><span class="o">&lt;=</span><span class="mi">190</span><span class="p">)])</span>
+<span class="n">m</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">True</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card3&quot;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">180</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card3&quot;</span><span class="p">]</span><span class="o">&lt;=</span><span class="mi">190</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8696872847986157
+</pre></div>
+</div>
+</div>
+</div>
+<p>Relacionando la proporcion de valores menores o iguales a 190 entre fraude y no fraude, se puede observar que se comporta parecido a la proporcion de datos de fraude o no fraude. Por otro lado para los valores mayores a 190 se considera una proporcion mayor de fraudes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">False</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card3&quot;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">150</span><span class="p">)])</span>
+<span class="n">m</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">True</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card3&quot;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">150</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9594887595572292
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card2&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>321.0    48935
+111.0    45191
+555.0    41995
+490.0    38145
+583.0    21803
+         ...  
+388.0       39
+153.0       38
+557.0       37
+473.0       18
+582.0       14
+Name: card2, Length: 500, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card2&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.025</span><span class="p">,</span><span class="mf">0.975</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.025    111.0
+0.975    583.0
+Name: card2, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">False</span><span class="p">][</span><span class="s2">&quot;card2&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.025</span><span class="p">,</span><span class="mf">0.975</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.025    111.0
+0.975    583.0
+Name: card2, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span><span class="o">==</span><span class="kc">True</span><span class="p">][</span><span class="s2">&quot;card2&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.025</span><span class="p">,</span><span class="mf">0.975</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.025    104.0
+0.975    583.0
+Name: card2, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tanto para fraude como para no fraude tienen los mismos limites percentiles de 2.5 y 97.5</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;card2&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Todos los datos&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+<span class="c1">#axes[0].set_xlim(140, 200)</span>
+
+<span class="c1"># Histograma donde la columna isFraud = 0</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="p">[</span><span class="s2">&quot;isFraud&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">][</span><span class="s2">&quot;card2&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;isFraud = 0&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+<span class="c1">#axes[1].set_xlim(140, 200)</span>
+
+<span class="c1"># Histograma donde la columna isFraud = 1</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df_n_num</span><span class="p">[</span><span class="n">df_n_num</span><span class="p">[</span><span class="s1">&#39;isFraud&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">][</span><span class="s2">&quot;card2&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;isFraud = 1&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;TransactionAmt&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+<span class="c1">#axes[2].set_xlim(140, 200)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/1e5cca9d7858ce6afa5b685a4a0e8a30bf2c3e6cb44e0783e57ad87e2cc1cffe.png" src="_images/1e5cca9d7858ce6afa5b685a4a0e8a30bf2c3e6cb44e0783e57ad87e2cc1cffe.png" />
+</div>
+</div>
+<p>No se logra observar una clara distribucion o algun patron caracteristico en los datos, por ende no se puede inferir mucho a simple vista sobre la variable Card2.</p>
+<p>Un arbol de regresion no es capaz de hacer</p>
+</section>
+<section id="columnas-categoricas">
+<h3>Columnas Categoricas<a class="headerlink" href="#columnas-categoricas" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_n_cat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Entity</th>
+      <th>card6</th>
+      <th>isFraud</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>MastC</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Visa</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>MastC</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>MastC</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Visa</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>590534</th>
+      <td>MastC</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>590536</th>
+      <td>MastC</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>590537</th>
+      <td>MastC</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>590538</th>
+      <td>MastC</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>590539</th>
+      <td>MastC</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+<p>581607 rows × 3 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_count_by_category</span> <span class="o">=</span> <span class="n">df_n_cat</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Entity&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+<span class="c1"># Contar el número de veces que &#39;True&#39; aparece en &#39;Flag&#39; por categoría</span>
+<span class="n">true_count_by_category</span> <span class="o">=</span> <span class="n">df_n_cat</span><span class="p">[</span><span class="n">df_n_cat</span><span class="p">[</span><span class="s1">&#39;isFraud&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Entity&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+<span class="c1"># Calcular la proporción de &#39;True&#39; con respecto al total por categoría</span>
+<span class="n">proportion_by_category</span> <span class="o">=</span> <span class="n">true_count_by_category</span> <span class="o">/</span> <span class="n">total_count_by_category</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Proporción de &#39;True&#39; por categoría:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">proportion_by_category</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Proporción de &#39;True&#39; por categoría:
+Entity
+AmExp    0.971004
+Disc     0.914698
+MastC    0.965635
+Visa     0.965567
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Extrayendo la proporcion de datos no fraudulentos en la poblacion por cada posible valor de “Entity”, tenemos que se presentan mayores fraudes para las tarjetas discovery y la que menos presenta fraudes es la american express</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_count_by_category</span> <span class="o">=</span> <span class="n">df_n_cat</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;card6&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+<span class="c1"># Contar el número de veces que &#39;True&#39; aparece en &#39;Flag&#39; por categoría</span>
+<span class="n">true_count_by_category</span> <span class="o">=</span> <span class="n">df_n_cat</span><span class="p">[</span><span class="n">df_n_cat</span><span class="p">[</span><span class="s1">&#39;isFraud&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;card6&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+<span class="c1"># Calcular la proporción de &#39;True&#39; con respecto al total por categoría</span>
+<span class="n">proportion_by_category</span> <span class="o">=</span> <span class="n">true_count_by_category</span> <span class="o">/</span> <span class="n">total_count_by_category</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Proporción de &#39;True&#39; por categoría:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">proportion_by_category</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Proporción de &#39;True&#39; por categoría:
+card6
+False    0.975624
+True     0.934146
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Los valores True de la variable Card6 presentan una proporcion mayor de transacciones fraudulentas que las de False.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Proyecto final de Machine Learning</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="modelosindependientes.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Modelos Eficaces:</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#librerias-utilizadas">Librerías utilizadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-exploratorio-de-datos-eda-fraud-detection">Análisis Exploratorio de Datos (EDA) - Fraud Detection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datos">Datos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#junte-de-columnas">Junte de columnas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transactiondt-a-fecha">TransactionDT a fecha</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exploracion-de-la-serie-de-tiempo">Exploracion de la serie de tiempo</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datos-faltantes">Datos faltantes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eda-variables-numericas-y-categoricas">Eda Variables numericas y categoricas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numericas">Numericas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#columnas-categoricas">Columnas Categoricas</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
